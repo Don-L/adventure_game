@@ -56,6 +56,20 @@ describe('a hero', function() {
     assert.equal(70, hero.health);
   })
 
+  it('should gain a kill point for killing a rat', function(){
+    hero = new Hero('Zed', 100, 'Chicken');
+    hero.killRat();
+    assert.equal(1, hero.kills);
+  })
+
+  it('should be able to find food and add it to its bag', function() {
+    hero = new Hero('Zed', 100, 'Chicken');
+    food = new Food('After Eights', 30);
+    hero.findFood(food);
+    assert.equal(food, hero.food[0]);
+
+  })
+
 
 
 

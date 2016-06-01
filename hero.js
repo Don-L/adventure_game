@@ -9,6 +9,7 @@ Hero.prototype = {
     console.log("My name is " + this.name);
   },
   food: [],
+  kills: 0,
   eat: function(food) {
     if (food.poisoned) {
       return (this.health -= food.value);
@@ -20,27 +21,17 @@ Hero.prototype = {
     else {
     return (this.health += food.value);
   }
+  },
+  killRat: function(rat) {
+    return (this.kills += 1);
+  },
+  findFood: function(food) {
+    if (this.food.length > 0) {
+     return ('bag full');
+    }else {
+    this.food.push(food);
   }
+ }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 module.exports = Hero;

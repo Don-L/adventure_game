@@ -13,5 +13,16 @@ describe('a rat', function() {
     assert.equal(true, food.poisoned);
   })
 
+  it('should be alive when created', function() {
+    rat = new Rat;
+    assert.equal(true, rat.alive);
+  })
+
+  it('should be dead when killed', function() {
+    rat = new Rat;
+    rat.kill();
+    assert.equal(false, rat.alive);
+  })
+
   
 })
