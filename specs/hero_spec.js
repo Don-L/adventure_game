@@ -58,7 +58,8 @@ describe('a hero', function() {
 
   it('should gain a kill point for killing a rat', function(){
     hero = new Hero('Zed', 100, 'Chicken');
-    hero.killRat();
+    rat = new Rat();
+    hero.killRat(rat);
     assert.equal(1, hero.kills);
   })
 

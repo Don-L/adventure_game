@@ -23,6 +23,7 @@ Hero.prototype = {
   }
   },
   killRat: function(rat) {
+    rat.kill();
     return (this.kills += 1);
   },
   findFood: function(food) {
